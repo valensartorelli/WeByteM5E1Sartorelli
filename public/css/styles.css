@@ -287,8 +287,10 @@ main section form .botones button[type=reset]:hover{
 main section form .botones button[type=reset]:focus{
     outline: 0;
 }
-footer{
+footer {
     margin-top: 40px;
+    background: #fff;
+    padding-top: 30px;
 }
 footer .iconos-footer{
     display: flex;
