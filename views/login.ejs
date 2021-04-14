@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<%- include('partials/head') %>
+	
+	<body>
+		<%- include('partials/header') %>
+		
+		<main class="login">
+			<section>
+                <form action="" method="POST">
+                    <div>
+                        <label for="user">Nombre de usuario: </label>
+                        <input type="text" name="usuario" id="user" required>
+                    </div>
+                    <div>
+                        <label for="pass">Contrase&ntilde;a: </label>
+                        <input type="password" name="contrasenia" id="pass" required>
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </section>
+		</main>
+
+		<%- include('partials/footer') %>
+	</body>
+</html>
