@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+
+//const controladorHome = require();
+
+// Listado de productos
+router.get('/', controller.home)
+
+// Formulario de creacion de productos (GET)
+router.get('/cart', controller.cart);
+
+//Formulario de creacion de productos (GET)
+router.get('/create', controller.create);
