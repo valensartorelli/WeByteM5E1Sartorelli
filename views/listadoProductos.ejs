@@ -2,20 +2,12 @@
 <html>
 	<%- include('partials/head') %>
 	
-	<body id="home">
+	<body>
 		<%- include('partials/header') %>
-
-		<img src="/images/img-home-banner.jpg" alt="Bienvenidos a Mercado Liebre" width="100%">
-
+		<br>
+		<br>
+		<br>
 		<main>
-			<h2 class="title">Basado en tu &uacute;ltima visita</h2>
-			<section>
-				<% products.forEach(product => {%>
-					<%- include('partials/product', { product })  %>
-				<% }) %>
-			</section>
-
-			<h2 class="title">Ofertas</h2>
 			<section>
 				<!-- Nombre del array.foreach (products es el array que contiene todos los productos). "product" es el iterador -->
 				<% products.forEach(product => {%>

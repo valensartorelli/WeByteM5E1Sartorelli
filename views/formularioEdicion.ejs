@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<%- include('partials/head') %>
+	
+	<body id="form-alta">
+		<%- include('partials/header') %>
+
+		<main>
+            <h1 class="form-title">Dar de alta un producto</h1>
+			<section>
+				<form action="" method="POST">
+                    <label for="name">Nombre: </label>
+                    <input type="text" name="nombre" id="name">
+                    <br><br>
+                    <label for="description">Descripcion: </label>
+                    <input type="text" name="descripcion" id="description">
+                    <br><br>
+                    <label for="price">Precio: </label>
+                    <input type="number" name="precio" id="price">
+                    <br><br>
+                    <label for="discount">Descuento: </label>
+                    <input type="text" name="descuento" id="discount">
+                    <br><br>
+                    <label for="image">Imagen: </label>
+                    <br>
+                    <input type="file" name="imagen" id="image">
+                </form>
+			</section>
+		</main>
+
+		<%- include('partials/footer') %>
+	</body>
+</html>

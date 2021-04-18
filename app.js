@@ -10,15 +10,14 @@ const productRoutes = require('./routes/productRoutes');
 
 const publicPath = path.resolve(__dirname, './public') ;
 app.use(express.static(publicPath));
+
 // configuro EJS
 app.set('view engine', 'ejs');
 
 // llamo al ruteo
-
 app.use('/', homeRoutes);
-
 //app.use('/', userRoutes);
-//app.use('/products', productRoutes);
+app.use('/products', productRoutes);
 
 
 app.listen(puerto || 3000, () => {
