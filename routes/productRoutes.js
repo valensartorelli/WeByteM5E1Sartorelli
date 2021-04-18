@@ -3,48 +3,23 @@ const router = express.Router();
 const controladorProducts = require('../controller/productController');
 
 router.get('/', (req, res) => {
-    // leo todo el array de products en el controlador productController
-    const products = controladorProducts.leerTodos();
-    // envio el array product a la vista para que la recorra EJS
-    console.log('volvi del controlador')
-
-    res.render('listadoProductos', { products });
+    res.render('listadoProductos');
 })
 
 router.get('/detail', (req, res) => {
-    // leo todo el array de products en el controlador productController
-    const products = controladorProducts.leerTodos();
-    // envio el array product a la vista para que la recorra EJS
-    console.log('volvi del controlador')
-
-    res.render('detalleProducto', { products });
+    res.render('detalleProducto');
 })
 
 router.get('/new', (req, res) => {
-    // leo todo el array de products en el controlador productController
-    const products = controladorProducts.leerTodos();
-    // envio el array product a la vista para que la recorra EJS
-    console.log('volvi del controlador')
-
-    res.render('formularioAlta', { products });
+    res.render('formularioAlta');
 })
 
 router.get('/actions', (req, res) => {
-    // leo todo el array de products en el controlador productController
-    const products = controladorProducts.leerTodos();
-    // envio el array product a la vista para que la recorra EJS
-    console.log('volvi del controlador')
-
-    res.render('formularioDetalle', { products });
+    res.render('formularioDetalle');
 })
 
 router.get('/edit', (req, res) => {
-    // leo todo el array de products en el controlador productController
-    const products = controladorProducts.leerTodos();
-    // envio el array product a la vista para que la recorra EJS
-    console.log('volvi del controlador')
-
-    res.render('formularioEdicion', { products });
+    res.render('formularioEdicion');
 })
 
 module.exports = router;
