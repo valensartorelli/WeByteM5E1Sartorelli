@@ -8,7 +8,7 @@
 		<main>
             <h1 class="form-title">Dar de alta un producto</h1>
 			<section>
-				<form action="" method="POST">
+				<form action="/products/<%= product.id %>?_method=PUT" method="POST">
                     <label for="name">Nombre: </label>
                     <input type="text" name="nombre" id="name">
                     <br><br>

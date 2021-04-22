@@ -8,15 +8,15 @@
 		<main>
 			<section class="producto">
                 <div class="imagen">
-                    <img src="/images/img-cafetera-moulinex.jpg" alt="" width="100%">
+                    <img src="/images/<%= product.image %>" alt="" width="100%">
                 </div>
 				<div class="detalle">
-                    <h1>Cafetera Moulinex</h1>
+                    <h1> <%= product.name %> </h1>
                     <p class="descripcion">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nibh nunc, auctor non ipsum id, mattis bibendum lacus. Donec a leo nec orci accumsan lacinia.
                     </p>
-                    <p class="descuento">40% off</p>
-                    <p class="precio">$6.770</p>
+                    <p class="descuento"><%= product.descuento %>% off</p>
+                    <p class="precio">$<%= product.price %></p>
                 </div>
 			</section>
 		</main>

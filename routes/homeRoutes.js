@@ -9,6 +9,8 @@ router.get('/', (req, res) => {
     console.log('volvi del controlador')
 
     res.render('home', { products });
-})
+}) 
+
+//router.get('/', controladorHome.index);
 
 module.exports = router;

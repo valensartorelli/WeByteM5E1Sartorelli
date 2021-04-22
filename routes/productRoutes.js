@@ -1,25 +1,20 @@
 const express = require('express');
+const productController = require('../controller/productController');
 const router = express.Router();
-const controladorProducts = require('../controller/productController');
+const multer = require('multer');
 
-router.get('/', (req, res) => {
-    res.render('listadoProductos');
-})
+router.get('/', productController.index);
 
-router.get('/detail', (req, res) => {
-    res.render('detalleProducto');
-})
+router.get('/create', productController.create);
 
-router.get('/new', (req, res) => {
-    res.render('formularioAlta');
-})
+router.get('/edit', productController.edit);
 
-router.get('/actions', (req, res) => {
-    res.render('formularioDetalle');
-})
+router.get('/:id', productController.detail);
 
-router.get('/edit', (req, res) => {
-    res.render('formularioEdicion');
-})
+router.get('/:id/edit', productController.edit);
+
+router.put('/edit/:id', productController.store);
+
+router.delete('/:id', productController.delete);
 
 module.exports = router;

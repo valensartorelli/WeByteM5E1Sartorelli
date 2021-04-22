@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+//const methodOverride = require('method-override');
 const puerto = process.env.PORT; 
 
 // Donde estan los gerentes de ruteo
@@ -14,10 +15,15 @@ app.use(express.static(publicPath));
 // configuro EJS
 app.set('view engine', 'ejs');
 
+// URL encode para que nos pueda llegar la info desde el formulario
+app.use(express.urlencoded({extended: false}));
+// Middleware que se encarga de controlar la posibilidad de usar delete y put
+//app.use(methodOverride('_method'));
+
 // llamo al ruteo
 app.use('/', homeRoutes);
 //app.use('/', userRoutes);
-app.use('/products', productRoutes);
+app.use('/product', productRoutes);
 
 
 app.listen(puerto || 3000, () => {
